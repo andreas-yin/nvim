@@ -13,6 +13,6 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<C-i>", vim.lsp.buf.format, {})
+		vim.keymap.set("n", "<leader>si", vim.lsp.buf.format, {})
 	end,
 }
