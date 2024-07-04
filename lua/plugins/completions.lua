@@ -42,6 +42,19 @@ return {
 					{ name = "buffer" },
 				}),
 			})
+
+      -- Registers copilot-chat source and enables it for copilot-chat filetype (so copilot chat window)
+require("CopilotChat.integrations.cmp").setup()
+
+-- You might also want to disable default <tab> complete mapping for copilot chat when doing this
+require('CopilotChat').setup({
+  mappings = {
+    complete = {
+      insert = '',
+    },
+  },
+  -- rest of your config
+})
 		end,
 	},
 }
